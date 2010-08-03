@@ -195,7 +195,7 @@ class ymsgr
         $resu = $this->dbh->prepare("INSERT INTO login (sess) VALUE (:sess)");
         $resu->bindParam(":sess", $sesi['sessionId']);
         $toks = $resu->execute();
-        print_r($response);
+        //print_r($response);
     }
 
     public function logoff()
@@ -388,7 +388,7 @@ class ymsgr
         
         $response = $this->do_post($req_url, $pbody, $headers);
 
-        print_r($response);
+        //print_r($response);
     }
 
     public function buddy_auth($budd)
@@ -423,7 +423,7 @@ class ymsgr
         
         $response = $this->do_post($req_url, $pbody, $headers);
 
-        print_r($response);
+        //print_r($response);
     }
 
     public function presence()
@@ -458,7 +458,7 @@ class ymsgr
         
         $response = $this->do_post($req_url, $pbody, $headers);
 
-        print_r($response);
+        //print_r($response);
     }
 
     public function keepalive()
@@ -493,7 +493,7 @@ class ymsgr
         
         $response = $this->do_get($req_url, 80, $headers, true);
 
-        print_r($response);
+        //print_r($response);
     }
 
     private function do_get($url, $port=80, $headers=NULL, $to=false)
